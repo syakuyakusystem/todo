@@ -87,7 +87,10 @@
 
 
 
-
+.updatetext{
+    display:flex;
+    padding-top: 30px;
+}
 
 
 .declaration {
@@ -120,6 +123,7 @@
 .body_text-item {
     width: 545px;
     border: none;
+    display: inline-block;
 }
 
 
