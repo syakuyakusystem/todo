@@ -89,28 +89,30 @@
     @foreach($text_names as $item)
       <span class="declaration">
         <tr class="body_text">
-            <td class="body_text-content inline-block">
-                <div class="body_text">
-                   <input type="text" name="content" value="{{ $item->content }}" class="body_text-item">
-                   <input type="hidden" name="id" value="{{ $item['id'] }}">
-                </div>
-            </td>
+            <form class="updatetext" action="/todos/{{ $item->id }}" method="post" role="menuitem" tabindex="-1">
+                <td class="body_text-content inline-block">
+                    <div class="body_text">
+                       <input type="text" name="content" value="{{ $item->content }}" class="body_text-item">
+                       <input type="hidden" name="id" value="{{ $item['id'] }}">
+                    </div>
+                </td>
 
-            <td class="tablebody">
-                <span class="tablebody_top">      
-                    <div class="tablebody_create">
-                        <form action="/todos/{{ $item->id }}" method="post" role="menuitem" tabindex="-1">
+                <td class="tablebody">
+                    <span class="tablebody_top">      
+                        <div class="tablebody_create">
+                       
                             @csrf
                             @method('PATCH')
                            
                             <button class="tablebody_edit" type="submit">
                                 更新
                             </button>
-                        </form>
-                    </div>
-            </td>
-            
-            <td class="tablebody">
+                       
+                        </div>
+
+                </td>
+            </form> 
+                <td class="tablebody">
                         <div class="tablebody_delete">
                             <form action="/todos/{{ $item->id }}"  method="post" role="menuitem" tabindex="-1">
                             @csrf
@@ -121,9 +123,8 @@
                             </form>
                         </div>
 
-                </span>
-            </td>
-
+                    </span>
+                </td>
         </tr>
       </span>
     @endforeach

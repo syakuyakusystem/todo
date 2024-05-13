@@ -22,5 +22,7 @@ use App\Http\Models\Todo;
 
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/todos', [TodoController::class, 'store']);
+Route::get('/todos/{id}', [TodoController::class, 'update']);
 Route::patch('/todos/{id}', [TodoController::class, 'update']);
+Route::get('/todos/{id}', [TodoController::class, 'delete']);
 Route::delete('/todos/{id}', [TodoController::class, 'delete']);
