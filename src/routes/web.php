@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
+use App\Http\Models\Todo;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Route::get('/', [TodoController::class, 'index']);
+Route::post('/todos', [TodoController::class, 'store']);
+Route::patch('/todos/{id}', [TodoController::class, 'update']);
+Route::delete('/todos/{id}', [TodoController::class, 'delete']);
