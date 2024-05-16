@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Todo</title>
 
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
@@ -15,14 +16,21 @@
   <header class="header">
       <div class="header__inner">
         <a class="header__logo" href="/">
-           Todo
+          Todo
         </a>
       </div>
+
+    <div class="header__category">
+      <a class="header__categorylogo" href="/categories">
+        カテゴリ一覧
+      </a>
+    </div>
   </header>
 
-  <main>
-    @yield('content')
-  </main>
+
+    <main>
+      @yield('content')
+    </main>
 </body>
 
 
