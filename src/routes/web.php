@@ -24,6 +24,8 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [TodoController::class, 'index']);
 Route::post('/todos', [TodoController::class, 'store']);
+
+Route::get('/todos/search/', [TodoController::class, 'search']);
 Route::get('/todos/{id}', [TodoController::class, 'update']);
 Route::patch('/todos/{id}', [TodoController::class, 'update']);
 Route::get('/todos/{id}', [TodoController::class, 'delete']);
@@ -37,4 +39,4 @@ Route::patch('/categories/{id}', [CategoryController::class, 'update']);
 Route::get('/categories/delete', [CategoryController::class, 'delete']);
 Route::delete('/categories/delete', [CategoryController::class, 'delete']);
 
-Route::get('/todos/search/}', [TodoController::class, 'search']);
+

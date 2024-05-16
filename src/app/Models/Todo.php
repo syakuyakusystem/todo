@@ -31,7 +31,7 @@ class Todo extends Model
         }
     }
 
-    public function scopeKeywordSerach($query, $keyword)
+    public function scopeKeywordSearch($query, $keyword)
     {
         if (!empty($keyword)) {
             $query->where('content', 'like', '%' . $keyword . '%');

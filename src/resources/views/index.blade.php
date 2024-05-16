@@ -41,6 +41,7 @@
         </div>
         <select name="category_id"  class="selectbox">
             @foreach($categories as $category)
+                <option value="">カテゴリ</option>
                 <option value="{{$category['id']}}">
                    {{$category['name']}}
                 </option>
@@ -72,6 +73,7 @@
  
             <select name="category_id"  class="selectbox">
                 @foreach($categories as $category)
+                   <option value="">カテゴリ</option>
                    <option value="{{$category['id']}}">
                        {{$category['name']}}
                    </option>
@@ -90,9 +92,7 @@
     <div class="text">
         <div class="text__sab">
             <h2 class="title">Todo</h2>
-             <span class="textboxspan"></span>
             <h2 class="title">カテゴリ</h2>
-             <span class="textboxspan"></span>
         </div>
     </div>
 </div>

@@ -95,10 +95,10 @@
     appearance: none;
 }
 
-
-.detail.html {
-    display: inline-block;
+.title {
+    margin-right: 30%;
 }
+
 
 
 .updatetext {
@@ -129,7 +129,7 @@
 .body_text {
     display: inline-block;
     text-align: left;
-
+    width: 305px;
 
 }
 
