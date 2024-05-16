@@ -1,11 +1,14 @@
 .header {
     background: #000;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
 }
 
 .header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
     max-width: 1230px;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
@@ -13,4 +16,16 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 40px;
+}
+
+
+
+.header__category {
+    display: flex;
+    align-items: center;
+}
+
+.header__categorylogo {
+    text-decoration: none;
+    color: #fff;
 }
